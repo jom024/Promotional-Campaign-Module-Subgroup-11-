@@ -1,0 +1,109 @@
+/* Import Bootstrap CSS */
+@import '~bootstrap/dist/css/bootstrap.css';
+@import '~bootstrap-vue/dist/bootstrap-vue.css';
+
+
+body {
+    background-color: #F8F8F8;
+    color: #2B2B28;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    padding: 5px;
+}
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .navbar {
+    position: relative; /* Ensure navbar stays above banner */
+    z-index: 2; /* Ensure navbar is above banner */
+    background-color: #F8F8F8;
+    color: #2B2B28;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+  }
+  .navbar-toggler {
+    border: none;
+    color: #2B2B28;
+  }
+  .navbar-nav {
+    margin-left: auto;
+  }
+  .nav-link {
+    color: #333; /* Adjust link color */
+  }
+  
+  .nav-item {
+    margin: auto 10px;
+  }
+  i {
+    font-size:20px;
+    color: #2B2B28;
+  }
+
+  i:hover {
+    font-size:20px;
+    color: #504f4f;
+  }
+
+  .banner-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Hide overflow to crop content */
+    transition: transform 0.3s ease; /* Transition for smooth scaling */
+    z-index: 1; /* Ensure banner is above other content */
+  }
+  
+  .banner-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .banner-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #F8F8F8;
+    background-color: rgba(43, 43, 40, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Fade in transition */
+  }
+  
+  .banner-container:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  
+  .banner-container:hover .banner-text {
+    opacity: 1; /* Fade in text on hover */
+  }
+  
+  .banner-text h2 {
+    color: #E3B04B;
+  }
+  
+
+footer {
+    background-color: #1e1b17;
+    position: relative; /* Ensure navbar stays above banner */
+    z-index: 2; /* Ensure navbar is above banner */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate {
+    animation: fadeIn 3s ease-in-out forwards;
+}
